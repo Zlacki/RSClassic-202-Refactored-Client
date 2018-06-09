@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config>
+    <jars>
+        <jar out="Client.jar" in="Client_before.jar"/>
+    </jars>
+	<property name="default-package" value="o"/>
+    <property name="force-default-package" value="enable"/>
+    <property name="methods-naming" value="keywords"/>
+    <property name="fields-naming" value="keywords"/>
+    <property name="string-encryption-type" value="strong"/>    
+    <keep-names>
+        <class template = "class *Main"/>
+        	<class template ="class net.swiftpk.client.mudclient">
+        </class>
+	<class template = "class *Main"/>
+		<class template ="class net.swiftpk.client.loader.WebClientLoader">
+	</class>
+    </keep-names>
+    <property value="log.xml" name="log-file"/>
+</config>

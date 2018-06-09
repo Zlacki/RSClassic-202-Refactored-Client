@@ -1,0 +1,29 @@
+<html>
+	<script>
+		function getTest() {
+			var width = document.getElementById('WebClient').offsetWidth;
+			var height = document.getElementById('WebClient').offsetHeight - 11;
+			return width+' '+height;
+		}
+		
+		function getWidth() {
+			return document.getElementById('WebClient').offsetWidth;
+		}
+
+		function getHeight() {
+			return document.getElementById('WebClient').offsetHeight;
+		}
+	</script>
+	<body>
+		<b>
+			<center>
+				Current [width,height] of WebClient Applet:<br />
+				<h1>[<script>getWidth()</script>,<script>getHeight()</script>];</h1>
+			</center>
+		</b>
+		<APPLET id="WebClient" name ="WebClient" code="net.swiftpk.rsc.loader.WebClientLoader" archive="B${build.number}.jar" width="100%" height="100%">
+			<PARAM name="separate_jvm" value="true" />
+			<PARAM name="java_version" value="1.8+" />
+		</APPLET>
+	</body>
+</html>
